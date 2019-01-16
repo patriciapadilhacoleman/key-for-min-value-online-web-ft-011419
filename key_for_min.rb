@@ -4,8 +4,15 @@
 def key_for_min_value(name_hash)
   
   string = nil
-  min_value
+  min_value = 0
   name_hash.collect do |key, value| 
+    
+    if string == nil 
+      
+      min_value = value
+      string = key
+      
+    end
     
     if value < min_value
       
