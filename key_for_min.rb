@@ -3,10 +3,17 @@
 
 def key_for_min_value(name_hash)
   
-  string = ""
+  string = nil
+  min_value = 0
   name_hash.collect |key, value| do
-  
     
+    if value < min_value
+      
+      string = key
+      
+    end
   end
+  
+  string
   
 end
